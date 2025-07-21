@@ -13,6 +13,7 @@ Please solve the problem: $ARGUMENTS.
 > Use subagents to investigate any unclear relationships or dependencies.
 
 **Key Activities:**
+- Verify the feasibility of the requirements with the current tech stacks, if not feasible, stop and ask me to change requirements or tech stacks.
 - Understand existing code structure and patterns
 - Identify dependencies and integrations
 - Look for existing similar implementations
@@ -33,6 +34,7 @@ Please solve the problem: $ARGUMENTS.
 - `ultrathink` - Highly complex or critical systems
 
 **Plan should include:**
+- Verify the feasibility of the requirements, if not feasible, stop and ask me to change requirements.
 - Implementation steps (numbered)
 - Files to modify/create
 - Testing approach
