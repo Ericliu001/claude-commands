@@ -7,13 +7,14 @@ Please solve the problem: $ARGUMENTS.
 ## Step 1: 🧠 Explore (Don't Code Yet)
 
 **Command Prompt:**
+> Check the feasibilities of the requirements, stop and ask questions if needed.
 > Use subagents to read the relevant files — but **do not write any code yet**.
 
 **Optional:**
 > Use subagents to investigate any unclear relationships or dependencies.
 
 **Key Activities:**
-- Verify the feasibility of the requirements with the current tech stacks, if not feasible, stop and ask me to change requirements or tech stacks.
+- Verify the feasibilities of the requirements with the current tech stack, if not feasible, stop and ask me to change requirements or tech stack.
 - Understand existing code structure and patterns
 - Identify dependencies and integrations
 - Look for existing similar implementations
@@ -34,7 +35,7 @@ Please solve the problem: $ARGUMENTS.
 - `ultrathink` - Highly complex or critical systems
 
 **Plan should include:**
-- Verify the feasibility of the requirements, if not feasible, stop and ask me to change requirements.
+- Verify the feasibilities of the requirements, if not feasible, stop and ask me to change requirements.
 - Implementation steps (numbered)
 - Files to modify/create
 - Testing approach
