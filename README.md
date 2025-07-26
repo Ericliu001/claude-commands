@@ -42,7 +42,7 @@ Streamlined workflow for fixing GitHub issues with proper branch management.
 
 ## Installation
 
-These commands are designed to work with Claude Code's custom command system. Place the `.md` files in your Claude commands directory.
+These commands are designed to work with Claude Code's custom command system. Place the `.md` files in your Claude commands directory, which is `~/.claude/commands`.
 
 ## Contributing
 
