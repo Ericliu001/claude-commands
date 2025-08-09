@@ -16,10 +16,10 @@ Copy the ENTIRE output from the `gh issue view` command above, then run:
 ```
 
 ## Step 3: Create pull request
-Create pull request on Github.
+Create pull request on Github using `gh pr create`
 
 ## Additional GitHub-specific requirements:
 - Use the GitHub CLI (`gh`) for all GitHub-related tasks
 - Create a new git branch with pattern: "Fix/issue.(issue number)-name" 
 - Push the git branch to remote repository after committing
-- Use gh pr create
+
