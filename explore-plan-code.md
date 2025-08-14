@@ -23,7 +23,7 @@ Please solve the problem: $ARGUMENTS.
 - ⚠️ **Critical:** Avoid asking for implementation at this stage.
 
 
-## Step 2: 🧭 Plan (Think Before Coding)
+## Step 2: 🧭 Plan (Think, Don't Code Yet)
 
 **Command Prompt:**
 > Claude, **think harder** and develop a plan. Outline each step clearly.
@@ -42,7 +42,7 @@ Please solve the problem: $ARGUMENTS.
 - Potential risks/assumptions
 - Rollback strategy if needed
 
-## Step 3: 🗣️ Discuss & Validate
+## Step 3: 🗣️ Discuss & Validate (Stop and wait for my response before proceeding to the next step)
 
 **Command Prompt:**
 > Present your plan to me and ask: "Does this approach look good? Any concerns or modifications before I proceed?"
@@ -54,7 +54,7 @@ Please solve the problem: $ARGUMENTS.
 - Validate assumptions
 - Confirm testing approach
 - Address any concerns or edge cases
-- Get approval to proceed
+- Stop here and Wait for my approval to proceed
 
 ## Step 4: 💻 Code (Verify While Implementing)
 
