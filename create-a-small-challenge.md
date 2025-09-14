@@ -2,7 +2,8 @@ Requirements: $ARGUMENTS.
 
 
 # Claude Code Workflow: Explore → Plan & Breakdown → Discuss → Create Unit Tests → Commit
-This workflow is to take requirements and break them down to small tasks, and then let me choose one task to implement and you will generate unit tests accordingly.
+This workflow is to take requirements and break them down to small tasks, and then let me choose one task to implement and you will generate unit tests accordingly. 
+I will implement the logic while you standby.
 
 
 ## Step 1: 🧠 Explore (Don't Code Yet)
@@ -51,6 +52,9 @@ This workflow is to take requirements and break them down to small tasks, and th
 
 > **Wait for my response before continuing to Step 4.**
 
+**Task Validation:**
+> Once I choose a task, briefly confirm: "I'll create tests for [chosen task description]. Does this match what you want to implement?"
+
 **Discussion Points:**
 - Review tasks
 - Confirm my choice of task
@@ -58,15 +62,18 @@ This workflow is to take requirements and break them down to small tasks, and th
 - Confirm testing approach
 - Address any concerns or edge cases
 - Stop here and Wait for my approval and choices of task to proceed
-- Remember my choice of task.
+- Remember my choice of task
+
+**Task Refinement:**
+> If I suggest changes to the chosen task or want to combine/modify tasks, update the task details before proceeding to Step 4. Ensure the final task is clear and achievable before creating tests.
 
 ## Step 4: 💻 Create Unit Tests
 
 **Command Prompt:**
-> Based on my choice of the task, create a new git branch and give it a branch name based on the task description.
+> Based on my choice of the task, create a new git branch using format: `feature/task-description`.
 > Then create unit tests for the task I chose, with clear comments explaining expected behavior.
-> Run the tests to ensure they fail appropriately (since implementation doesn't exist yet).
-> Create a git commit when all unit tests.
+> Try to run the tests to ensure they fail appropriately (TDD red phase). If test execution fails due to build/scheme issues, skip running and proceed to commit.
+> Create a git commit with message: "Add unit tests for [task description] - TDD setup".
 
 **Implementation Guidelines:**
 - Each unit test should have clear comments on the expectations
@@ -75,17 +82,22 @@ This workflow is to take requirements and break them down to small tasks, and th
 - Verify each change would work with surrounding code
 - Handle error cases appropriately
 - Tests should fail initially (red phase of TDD)
-- Commit the unit tests to Git
+- Attempt to run tests to confirm they fail with appropriate error messages
+- If test execution fails due to environment issues, verify tests compile and commit anyway
+- Commit the unit tests to Git with descriptive message
 
 **Stop Points:**
-- After core unit tests creation and validation
+- After core unit tests creation, validation, and commit
 - If you encounter unexpected issues
 - If assumptions prove incorrect
+
+**Handoff to User:**
+> After completing tests and commit, say: "Tests ready. You can start implementing now - ask if you need help. Once you are done, say "All done!" and I will take it over from there."
 
 ## Step 5: 🚀 Implementation (My Task)
 
 **Command Prompt:**
-> Present the task detail and expectations then tell me: "You can start the implementation now."
+> Present the task detail and expectations.
 > Only help me with implementations when I run into problems and ask for help.
 
 **Your Responsibility:**
@@ -107,7 +119,10 @@ This workflow is to take requirements and break them down to small tasks, and th
 - Code follows existing patterns and conventions
 - No linting or type errors
 
-## Step 6: 📦 Final Commit
+**Handoff to Claude:**
+> When implementation is complete and all tests pass, say: "All done!"
+
+## Step 6: 📦 Final Commit 
 
 **Command Prompt:**
 > Once I confirm all tests are passing and the implementation is complete, create a final commit with the implementation.
@@ -127,6 +142,7 @@ This workflow is to take requirements and break them down to small tasks, and th
 
 **Critical Success Factors:**
 - Steps **1, 2, and 3 are critical**. Skipping them leads to premature coding without sufficient context.
+- Step 5 is user's responsibility, Claude should go into standby mode to answer questions or help with implementations when asked.
 - Use subagents generously during exploration to preserve context and depth of reasoning.
 - Save plans early—resetting to a well-defined plan checkpoint is easier than unwinding bad code.
 - Clear handoff between Claude (tests) and user (implementation) is essential.
@@ -137,10 +153,14 @@ This workflow is to take requirements and break them down to small tasks, and th
 - Not running tests frequently during implementation
 - Making assumptions without validation
 - Claude implementing code instead of just creating tests
+- Proceeding with tests before validating the chosen task aligns with user intent
+- Getting blocked by test execution issues instead of using fallback strategies
 
 **Recovery Strategies:**
 - If stuck during exploration, return to Step 1 with new questions
 - If tests are poorly designed, Claude should refactor them before handoff
+- If chosen task doesn't align with user intent, return to Step 3 for task refinement
+- If test execution fails, use fallback strategies and proceed with commit
 - If implementation gets complex, break task into smaller subtasks
 - If plan proves flawed, restart from Step 2 with new insights
 
