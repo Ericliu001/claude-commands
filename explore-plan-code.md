@@ -59,7 +59,7 @@ Please solve the problem: $ARGUMENTS.
 ## Step 4: 💻 Code (Verify While Implementing)
 
 **Command Prompt:**
-> First, create a new git branch and give it a branch name before making any changes.
+> Create a new git branch and give it a branch name before making any changes.
 > Then implement the plan step by step. As you write, verify each part is consistent with the surrounding code.
 
 **Implementation Guidelines:**
