@@ -101,6 +101,7 @@ Task #: [Brief Title]
 ```
 > Create sub-tasks using JIRA CLI (`jira`)
 > Each sub-task: clear summary + description, ≤2 hours
+> Description should describe the recommanded approach and alternative approaches if available. 
 ```
 
 **Sub-task Creation Checklist:**

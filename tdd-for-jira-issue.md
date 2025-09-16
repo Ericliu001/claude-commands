@@ -138,6 +138,52 @@ git checkout -b feature/[issue-description]
 git add . && git commit -m "Add unit tests for [description] - TDD red phase"
 ```
 
+
+**Handoff to User:**
+> After completing tests and commit, say: "Tests ready. You can start implementing now - ask if you need help. Once you are done, say "All done!" and I will take it over from there."
+
+## Step 5: 🚀 Implementation (My Task)
+
+**Command Prompt:**
+> Present the task detail and expectations.
+> Only help me with implementations when I run into problems and ask for help.
+
+**Your Responsibility:**
+> Answer my questions.
+> Only help me with implementations when I ask you to do so.
+
+**My Responsibility:**
+> Now let me implement the actual code to make the tests pass. This is the "green" phase of TDD.
+
+**Guidelines:**
+- Run tests frequently to check progress
+- Allow me to implement incrementally - make one test pass at a time
+- Follow the test specifications exactly
+- Suggest refactorings as needed
+
+
+**Success Criteria:**
+- All unit tests pass
+- Code follows existing patterns and conventions
+- No linting or type errors
+
+**Handoff to Claude:**
+> When implementation is complete and all tests pass, say: "All done!"
+
+## Step 6: 📦 Final Commit 
+
+**Command Prompt:**
+> Once I confirm all tests are passing and the implementation is complete, create a final commit with the implementation.
+
+**Commit Guidelines:**
+- Use conventional commit format if project uses it
+- Include both what and why in commit message
+- Reference any issues or tickets
+- Run linting and type checking before commit
+- Ensure all changes are staged
+
+
+
 ---
 
 ## 🧩 TDD Best Practices & Success Factors
