@@ -110,14 +110,6 @@ Task #: [Brief Title]
 - [ ] **Links:** Parent issue properly linked
 - [ ] **Labels/Components:** Appropriate categorization
 
-**JIRA CLI Commands Reference:**
-```bash
-# Create sub-task
-jira issue create --type sub-task --parent [PARENT-ID] --summary "[TITLE]" --body "[DESCRIPTION]"
-
-# List sub-tasks to verify
-jira issue list --parent [PARENT-ID]
-```
 
 **Quality Standards:**
 - Actionable summaries (start with verbs)
