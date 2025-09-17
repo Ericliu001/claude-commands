@@ -96,17 +96,15 @@ Mock Requirements: [Dependencies to mock]
 
 **Command Prompt:**
 ```
-> Create git branch: feature/[task-description]
 > Implement unit tests with clear behavioral expectations
 > Run tests to verify RED phase (proper failures)
 > Commit with message: "Add unit tests for [task description] - TDD red phase"
 ```
 
 **TDD Implementation Process:**
-1. **Branch Creation:** `git checkout -b feature/[descriptive-name]`
-2. **Test Implementation:** Write failing tests first
-3. **Red Phase Validation:** Verify tests fail as expected
-4. **Commit Tests:** Save failing tests to git
+1. **Test Implementation:** Write failing tests first
+2. **Red Phase Validation:** Verify tests fail as expected
+3. **Commit Tests:** Save failing tests to git
 
 **Test Implementation Checklist:**
 - [ ] **Test Structure:** Follow project's testing conventions
