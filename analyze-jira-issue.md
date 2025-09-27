@@ -53,32 +53,11 @@ This workflow takes a JIRA Issue ID and analyzes it and provides context.
 | `ultrathink` | Critical systems, high complexity |
 
 
-## Step 3: 🗣️ Discuss & Validate ⏸️ **MANDATORY STOP POINT**
+## Step 3: 💻 Comment on JIRA Issue
 
 **Command Prompt:**
 ```
-> Present your plan and ask: "Does this approach look good?"
-> WAIT for user response before continuing to Step 4
-```
-
-**🛑 Critical:** Do NOT proceed without explicit user approval
-
-**Validation Process:**
-1. **Plan Review:** Present complete plan
-2. **Assumption Check:** Highlight key assumptions
-3. **User Input:** Wait for feedback/modifications
-4. **Confirmation:** Once approved, confirm: "I'll update [JIRA Issue]"
-
-**Possible Outcomes:**
-- ✅ **Approved:** Proceed to Step 4
-- 🔄 **Modifications Needed:** Update plan, re-present
-- ❌ **Rejected:** Return to Step 2 or clarify requirements
-
-
-## Step 4: 💻 Comment on JIRA Issue
-
-**Command Prompt:**
-```
-> Add a comment to the JIRA issue which includes the all the information you've found.
+> Add a comment to the JIRA issue which includes the plan and all the information you've found.
+> (If applicable) The comment should also include code examples in markdown.
 > Including: Implementation details, (if available) alternative approaches, scope and time estimation of this implementation
 ```
